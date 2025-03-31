@@ -10,16 +10,17 @@ const port = 3000
 const name = "Delique Allen"
 
 app.get('/', (req, res) => {
+    res.setHeader('Content-Type', 'text/html')
     res.render('index', {
         name: name,
     })
 })
 
 app.get('/resume', (req, res) => {
+    res.setHeader('Content-Type', 'text/html')
     res.render('resume', {
         name: name,
     })
-    res.redirect('/')
 })
 
 app.listen(port, () => {
