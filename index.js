@@ -7,16 +7,17 @@ app.set('views', path.join(__dirname, 'views'))
 
 const port = 3000
 
+const name = "Delique Allen"
+
 app.get('/', (req, res) => {
-    const name = "Delique Allen"
-    res.render('home', {
+    res.render('index', {
         name: name,
     })
 })
 
 app.get('/resume', (req, res) => {
     res.render('resume', {
-
+        name: name,
     })
     res.redirect('/')
 })
